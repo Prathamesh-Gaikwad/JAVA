@@ -1,0 +1,15 @@
+first compile .java file for servlet..
+then paste it in --> webapps/examples/webinf/classes/
+then add two tags in --> webapps/examples/webinf/web.xml (file)
+	as..
+		<servlet></servlet>
+		<servlet-mapping></servlet-mapping>
+then start web server..
+	as...
+		systemctl start tomcat
+		systemctl status tomcat [for exiting status output write ":wq"]
+		systemctl stop tomcat	[make sure before power of tomcat needs to be stopped]
+
+for executing jsp add jsp jar to classpath..
+and more important ... 
+	above tomcat 10 today all servlet packgaes were now in "jakarta.servlet.*" otherwise code will not get compiled..

@@ -1,0 +1,6 @@
+Submit project synopsis	2025-01-12	Pending
+it is equipped with information like project description
+the required project hardware and software support
+details..
+Enhance command	2024-12-18	Pending
+Enhance import command, refer respective module

@@ -1,0 +1,2 @@
+Main-Class: Registration
+Class-Path: postgresql-42.7.4.jar mail-1.4.7.jar activation-1.1.jar smtp-1.4.5.jar

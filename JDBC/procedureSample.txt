@@ -1,0 +1,19 @@
+PROCEDURE CREATED =>
+
+	CREATE PROCEDURE insertIntoEmployee(param1 varchar(30), param2 varchar(30), param3 integer)
+	LANGUAGE SQL
+	AS $$
+	insert into employee (name, position, workinghr) values (param1, param2, param3);
+	$$;
+
+PROCEDURE CALL =>
+
+	CALL insertIntoEmployee('Akshar', 'Bowler', 21);
+	
+OUTPUT =>
+
+	 id |  name  | position | workinghr 
+	----+--------+----------+-----------
+	 14 | Akshar | Bowler   |        21
+	(1 row)
+	

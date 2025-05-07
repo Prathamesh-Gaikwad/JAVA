@@ -1,0 +1,7 @@
+Conduct security audit,Perform comprehensive security sudit on the company's network and systems to  identify vulnerabilities and ensure compliance with industry standars..,2024-12-20,Completed
+Task Manager Functions,basic functionality need to fulfill within time limt,2025-01-02,Completed
+Revise C,before sleep,2024-12-31,Completed
+call Payal Yewale,some things to discuss about further preparation,2025-01-09,Completed
+Submit project synopsis,it is equipped with information like project description the required project hardware and software support details..,2025-01-12,Pending
+Enhance command,Enhance import command refer respective module,2024-12-18,Pending
+Complete Project Features,complete all features done as early as possible especially feature about file handling please done it as early as possible because it really now to late,2025-01-15,Pending

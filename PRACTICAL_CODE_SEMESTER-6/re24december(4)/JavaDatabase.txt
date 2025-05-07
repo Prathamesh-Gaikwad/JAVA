@@ -1,0 +1,99 @@
+┌──(root㉿kali)-[~/Desktop]
+└─# export CLASSPATH=/root/Documents/70/postgresql-42.7.5.jar:. 
+                                                                                                                                                           
+┌──(root㉿kali)-[~/Desktop]
+└─# echo $CLASSPATH                                            
+/root/Documents/70/postgresql-42.7.5.jar:.
+                                                                                                                                                           
+┌──(root㉿kali)-[~/Desktop]
+└─# cd Documents/70/
+cd: no such file or directory: Documents/70/
+                                                                                                                                                           
+┌──(root㉿kali)-[~/Desktop]
+└─# cd ..                   
+                                                                                                                                                           
+┌──(root㉿kali)-[~]
+└─# cd Documents/70/
+                                                                                                                                                           
+┌──(root㉿kali)-[~/Documents/70]
+└─# javac TableExample.java 
+Picked up _JAVA_OPTIONS: -Dawt.useSystemAAFontSettings=on -Dswing.aatext=true
+TableExample.java:12: error: cannot find symbol
+                        Connectiom conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/testdb", "postgres", "123");
+                        ^
+  symbol:   class Connectiom
+  location: class TableExample
+TableExample.java:27: warning: [removal] Integer(int) in Integer has been deprecated and marked for removal
+                                data[i][0] = new Integer(rs.getInt(1));
+                                             ^
+1 error
+1 warning
+                                                                                                                                                           
+┌──(root㉿kali)-[~/Documents/70]
+└─# javac TableExample.java
+Picked up _JAVA_OPTIONS: -Dawt.useSystemAAFontSettings=on -Dswing.aatext=true
+TableExample.java:27: warning: [removal] Integer(int) in Integer has been deprecated and marked for removal
+                                data[i][0] = new Integer(rs.getInt(1));
+                                             ^
+1 warning
+                                                                                                                                                           
+┌──(root㉿kali)-[~/Documents/70]
+└─# ls
+LIST  MAP  SET  SORTEDSET  THREAD  TableExample.class  TableExample.java  postgresql-42.7.5.jar
+                                                                                                                                                           
+┌──(root㉿kali)-[~/Documents/70]
+└─# java TableExample      
+Picked up _JAVA_OPTIONS: -Dawt.useSystemAAFontSettings=on -Dswing.aatext=true
+org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+                                                                                                                                                           
+┌──(root㉿kali)-[~/Documents/70]
+└─# su - postgres
+┏━(Message from Kali developers)
+┃
+┃ This is a minimal installation of Kali Linux, you likely
+┃ want to install supplementary tools. Learn how:
+┃ ⇒ https://www.kali.org/docs/troubleshooting/common-minimum-setup/
+┃
+┗━(Run: “touch ~/.hushlogin” to hide this message)
+postgres@kali:~$ psql -U postgres -d college
+psql: error: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: No such file or directory
+        Is the server running locally and accepting connections on that socket?
+postgres@kali:~$ exit
+logout
+                                                                                                                                                           
+┌──(root㉿kali)-[~/Documents/70]
+└─# service postgresql start
+                                                                                                                                                           
+┌──(root㉿kali)-[~/Documents/70]
+└─# java TableExample       
+Picked up _JAVA_OPTIONS: -Dawt.useSystemAAFontSettings=on -Dswing.aatext=true
+org.postgresql.util.PSQLException: FATAL: database "testdb" does not exist
+                                                                                                                                                           
+┌──(root㉿kali)-[~/Documents/70]
+└─# su - postgres           
+┏━(Message from Kali developers)
+┃
+┃ This is a minimal installation of Kali Linux, you likely
+┃ want to install supplementary tools. Learn how:
+┃ ⇒ https://www.kali.org/docs/troubleshooting/common-minimum-setup/
+┃
+┗━(Run: “touch ~/.hushlogin” to hide this message)
+postgres@kali:~$ psql -U postgres -d college
+psql (16.1 (Debian 16.1-1))
+Type "help" for help.
+
+college=# create table project (ID SERIAL, Name varchar(30), Description varchar(30), Status varchar(30), PRIMARY KEY (ID));
+CREATE TABLE
+college=# INSERT INTO project (Name, Description, Status) values ('Hotel Management System', 'For Helping Hotel Industry People', 'Under Development');
+ERROR:  value too long for type character varying(30)
+college=# INSERT INTO project (Name, Description, Status) values ('Hotel Management', 'ForHotel Industry', 'Under Development');
+INSERT 0 1
+college=# select * from project;
+ id |       name       |    description    |      status       
+----+------------------+-------------------+-------------------
+  1 | Hotel Management | ForHotel Industry | Under Development
+(1 row)
+
+college=# \q
+postgres@kali:~$ exit
+logout

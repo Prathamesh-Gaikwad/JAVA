@@ -1,0 +1,1 @@
+export CLASSPATH=/home/prathamesh/Documents/JAVA/PERSONAL_TASK_TRACKER/TASK_TRACKER/JAR/postgresql-42.7.4.jar:/home/prathamesh/Documents/JAVA/PERSONAL_TASK_TRACKER/TASK_TRACKER/JAR/activation-1.1.jar:/home/prathamesh/Documents/JAVA/PERSONAL_TASK_TRACKER/TASK_TRACKER/JAR/mail-1.4.7.jar:/home/prathamesh/Documents/JAVA/PERSONAL_TASK_TRACKER/TASK_TRACKER/JAR/smtp-1.4.5.jar:.

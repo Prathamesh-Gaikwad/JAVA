@@ -1,0 +1,8 @@
+Revise C,2024-12-31,Completed,before sleep,
+Submit project synopsis,2025-01-12,Pending,it is equipped with information like project description the required project hardware and software support details..,
+Task Manager Functions,2025-01-02,Completed,basic functionality need to fulfill within time limt,
+Conduct security audit,2024-01-20,Completed,Perform comprehensive security sudit on the company's network and systems to  identify vulnerabilities and ensure compliance with industry standars..,
+Task Manager Functions,2025-01-02,Completed,basic functionality need to fulfill within time limt,
+Revise C,2024-01-31,Completed,before sleep,
+Submit project synopsis,2025-01-12,Pending,it is equipped with information like project description the required project hardware and software support details..,
+Complete Project Features,2025-01-15,Pending,complete all features done as early as possible especially feature about file handling please done it as early as possible because it really now to late,
